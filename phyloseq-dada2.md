@@ -511,7 +511,7 @@ out.wuf.log <- ordinate(pslog, method = "MDS", distance = "wunifrac")
 ```
 
     ## Warning in UniFrac(physeq, weighted = TRUE, ...): Randomly assigning root as --
-    ## GCAAGCGTTATCCGGATTTACTGGGTGTAAAGGGGGCGCAGACGGCCATGGCAAGCCCGGTGTGAAAGGCAGGGGCATAACCCCTGGACTGCACTGGGAACTGTCAGGCTGGAGTGCCGGAGGGGTAAGCGGAATTCCTGGTGTAGCGGTGAAATGCGTAGATATCAGGAGGAACACCGGCGGCGAAGGCGGCTTACTGGACGGCAACTGACGTTGAGGCCCGAAAGCGTGGGGA
+    ## GCTAGCGTTATTCGGAATTACTGGGCGTAAAGCGCACGTAGGCGGATCGGAAAGTCAGAGGTGAAATCCCAGGGCTCAACCCTGGAACTGCCTTTGAAACTCCCGATCTTGAGGTCGAGAGAGGTGAGTGGAATTCCGAGTGTAGAGGTGAAATTCGTAGATATTCGGAGGAACACCAGTGGCGAAGGCGGCTCACTGGCTCGATACTGACGCTGAGGTGCGAAAGCGTGGGGAG
     ## -- in the phylogenetic tree in the data you provided.
 
 ``` r
@@ -624,7 +624,7 @@ out.wuf.log <- ordinate(pslog, method = "PCoA", distance ="wunifrac")
 ```
 
     ## Warning in UniFrac(physeq, weighted = TRUE, ...): Randomly assigning root as --
-    ## GCAAGCGTTATCCGGATTTACTGGGTGTAAAGGGAGCGCAGGCGGCGCGTTAAGCCTGGTGTGAAAGCCCGCGGCCCAACCGCGGGACTGCATTGGGAACTGGCGCGCTGGAGTGCCGGAGGGGTAGGCGGAATTCCTAGTGTAGCGGTGAAATGCGTAGATATTAGGAGGAACACCAGTGGCGAAGGCGGCCTACTGGACGGTGACTGACGCTGAGGCTCGAAAGCGTGGGGAG
+    ## GCGAGCGTTATCCGGATTTACTGGGTGTAAAGGGCGTGTAGGCGGGAGAGCAAGTCAGATGTGAAAACTACAGGCTTAACCTGTAGCCTGCATTTGAAACTGTTTTTCTTGAGTGATGGAGAGGCAGGCGGAATTCCTAGTGTAGCGGTGAAATGCGTAGATATTAGGAGGAACACCAGTGGCGAAGGCGGCCTGCTGGACATTAACTGACGCTGAGGCGCGAAAGCGTGGGGAG
     ## -- in the phylogenetic tree in the data you provided.
 
 ``` r
@@ -896,8 +896,8 @@ table(plsClasses, testing$age)
 
     ##            
     ## plsClasses  (0,100] (100,400]
-    ##   (0,100]        68         0
-    ##   (100,400]       4        45
+    ##   (0,100]        68         1
+    ##   (100,400]       1        44
 
 Comme autre exemple, nous pouvons essayer des forêts aléatoires. Ceci
 est exécuté exactement de la même manière que PLS, en basculant
@@ -941,8 +941,8 @@ table(rfClasses, testing$age)
 
     ##            
     ## rfClasses   (0,100] (100,400]
-    ##   (0,100]        70         0
-    ##   (100,400]       2        45
+    ##   (0,100]        69         1
+    ##   (100,400]       0        44
 
 Pour interpréter ces PLS et les résultats aléatoires de la forêt, il est
 standard de produire respectivement des biplots et des graphiques de
@@ -1138,7 +1138,7 @@ gt <- graph_perm_test(ps, "family_relationship", grouping = "host_subject_id",
 gt$pva
 ```
 
-    ## [1] 0.006
+    ## [1] 0.004
 
 ``` r
 library(gridExtra)
