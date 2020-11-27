@@ -2,10 +2,14 @@
 title: "Phyloseq-state-dada"
 output:
   github_document:
-    toc: true
-    toc_depht: 2
+  toc: true
+  toc_depht: 2
 ---
 
+```{r}
+library(knitr)
+library(markdown) 
+```
 
 #Importer directement les tables produites par le pipeline DADA2 dans phyloseq. Nous ajouterons également la petite quantité de métadonnées dont nous disposons - les échantillons sont nommés par le sexe (G), le numéro de sujet de la souris (X) et le jour après le sevrage (Y) où ils ont été échantillonnés (par exemple GXDY).
 
@@ -53,28 +57,9 @@ library("ggplot2")
 
 
 #construire un échantillon simple à data.framepartir des informations encodées dans les noms de fichiers: maintenant on regroupe tout dans un objet phyloseq avec la commande ps (arbre phylo, table de données etc…) exemple de l’armoire et des tiroirs. On va créer nos outils pour l’analyse de phyloseq
-```{r}
-samples.out <- rownames(seqtab.nochim)
-subject <- sapply(strsplit(samples.out, "D"), `[`, 1)
-gender <- substr(subject,1,1)
-subject <- substr(subject,2,999)
-day <- as.integer(sapply(strsplit(samples.out, "D"), `[`, 2))
-samdf <- data.frame(Subject=subject, Gender=gender, Day=day)
-samdf$When <- "Early"
-samdf$When[samdf$Day>100] <- "Late"
-rownames(samdf) <- samples.out
-```
 
 
-#construire un objet phyloseq directement à partir des sorties de dada2
-```{r}
-ps <- phyloseq(otu_table(seqtab.nochim, taxa_are_rows=FALSE), 
-               sample_data(samdf), 
-               tax_table(taxa))
-ps <- prune_samples(sample_names(ps) != "Mock", ps) # Remove mock sample
-```
-
-
+#Constriure un objet phyolseq
 ```{r}
 ps_connect <-url("https://raw.githubusercontent.com/spholmes/F1000_workflow/master/data/ps.rds")
 ps = readRDS(ps_connect)
@@ -146,6 +131,7 @@ aucune séparation naturelle n'est immédiatement évidente, mais il semble que 
 prevalenceThreshold = 0.05 * nsamples(ps)
 prevalenceThreshold
 ```
+
 ```{r}
 # Execute prevalence filter, using `prune_taxa()` function
 keepTaxa = rownames(prevdf1)[(prevdf1$Prevalence >= prevalenceThreshold)]
@@ -838,6 +824,7 @@ X <- otu_table(microbe)
 X[X > 50] <- 50
 dim(X)
 ```
+
 ```{r}
 dim(metab)
 ```
