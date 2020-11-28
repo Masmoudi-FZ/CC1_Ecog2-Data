@@ -12,9 +12,11 @@ sudo apt-get install -y liblzma-dev
     ## sudo: unable to resolve host d8eb10e9e619: Name or service not known
     ## Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
     ## Get:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
-    ## Get:3 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
-    ## Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
-    ## Fetched 324 kB in 1s (377 kB/s)
+    ## Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+    ## Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+    ## Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [850 kB]
+    ## Get:6 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [871 kB]
+    ## Fetched 2,045 kB in 1s (3,069 kB/s)
     ## Reading package lists...
     ## sudo: unable to resolve host d8eb10e9e619: Name or service not known
     ## Reading package lists...
@@ -188,9 +190,9 @@ install_local("./structSSI_1.1.1.tar.gz")
 
     ## Skipping 1 packages not available: multtest
 
-    ##      checking for file ‘/tmp/RtmpvMGmTF/remotes7ac682f1833/structSSI/DESCRIPTION’ ...  ✓  checking for file ‘/tmp/RtmpvMGmTF/remotes7ac682f1833/structSSI/DESCRIPTION’
+    ##      checking for file ‘/tmp/Rtmph33qee/remotes102c1414169c/structSSI/DESCRIPTION’ ...  ✓  checking for file ‘/tmp/Rtmph33qee/remotes102c1414169c/structSSI/DESCRIPTION’ (338ms)
     ##   ─  preparing ‘structSSI’:
-    ##      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
+    ##    checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
     ##   ─  checking for LF line-endings in source and make files and shell scripts
     ##   ─  checking for empty or unneeded directories
     ## ─  looking to see if a ‘data/datalist’ file should be added
@@ -205,16 +207,16 @@ install_local("./structSSI_1.1.1.tar.gz")
 wget https://cran.r-project.org/src/contrib/Archive/structSSI/structSSI_1.1.1.tar.gz
 ```
 
-    ## --2020-11-27 23:36:28--  https://cran.r-project.org/src/contrib/Archive/structSSI/structSSI_1.1.1.tar.gz
+    ## --2020-11-28 10:40:38--  https://cran.r-project.org/src/contrib/Archive/structSSI/structSSI_1.1.1.tar.gz
     ## Resolving cran.r-project.org (cran.r-project.org)... 137.208.57.37
     ## Connecting to cran.r-project.org (cran.r-project.org)|137.208.57.37|:443... connected.
     ## HTTP request sent, awaiting response... 200 OK
     ## Length: 25591 (25K) [application/x-gzip]
-    ## Saving to: ‘structSSI_1.1.1.tar.gz.2’
+    ## Saving to: ‘structSSI_1.1.1.tar.gz.4’
     ## 
-    ##      0K .......... .......... ....                            100% 1.12M=0.02s
+    ##      0K .......... .......... ....                            100% 1.11M=0.02s
     ## 
-    ## 2020-11-27 23:36:28 (1.12 MB/s) - ‘structSSI_1.1.1.tar.gz.2’ saved [25591/25591]
+    ## 2020-11-28 10:40:38 (1.11 MB/s) - ‘structSSI_1.1.1.tar.gz.4’ saved [25591/25591]
 
 \#usethis(=use\_release\_issue) pour créer une liste de contrôle des
 tâches d’étude
